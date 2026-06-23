@@ -20,6 +20,23 @@ def main():
     load_data_to_session()
 
     st.title("Beranda Dashboard Curah Hujan")
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col1:
+        try:
+            st.image("image/LOGO BMKG.png", width=100, caption="BMKG")
+        except Exception:
+            st.write("Logo BMKG tidak tersedia")
+    with col2:
+        st.markdown("### Dashboard Curah Hujan Interaktif")
+        st.markdown("**Dibuat oleh: Yuan Zalfa Tanggahma**")
+        st.markdown("Dashboard ini menampilkan analisis spasial dan temporal curah hujan serta klasifikasi sifat hujan.")
+    with col3:
+        try:
+            st.image("image/LOGO STMKG.PNG", width=100, caption="STMKG")
+        except Exception:
+            st.write("Logo STMKG tidak tersedia")
+
     st.write(
         "Selamat datang di dashboard interaktif curah hujan. "
         "Gunakan menu di sebelah kiri untuk berpindah antar halaman analisis spasial dan temporal."
